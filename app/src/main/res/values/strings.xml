@@ -3,4 +3,10 @@
     <string name="movies">Movies</string>
     <string name="episodes">Episodes</string>
     <string name="upcoming">Upcoming</string>
+    <string name="imdb">IMDb</string>
+    <string name="genre">Genre: </string>
+    <string name="country">Country: </string>
+    <string name="language">Language: </string>
+    <string name="schedule">Schedule: </string>
+    <string name="status">Status: </string>
 </resources>

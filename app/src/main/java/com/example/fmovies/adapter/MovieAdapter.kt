@@ -1,12 +1,15 @@
 package com.example.fmovies.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
+import com.example.fmovies.MovieDetailActivity
 import com.example.fmovies.databinding.MovieLayoutAdapterBinding
+import com.example.fmovies.helper.Constant
 import com.example.fmovies.models.TvShowItem
 
 class MovieAdapter: RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
@@ -46,6 +49,12 @@ class MovieAdapter: RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
                 crossfade(true)
                 crossfade(1000)
             }
+        }
+
+        holder.itemView.setOnClickListener {
+            val intent = Intent(holder.itemView.context, MovieDetailActivity::class.java)
+            intent.putExtra(Constant.MOVIE, movie[position])
+            holder.itemView.context.startActivity(intent)
         }
     }
 

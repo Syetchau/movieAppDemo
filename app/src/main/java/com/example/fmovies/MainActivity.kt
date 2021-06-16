@@ -31,28 +31,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.rvMovie.apply {
             adapter = movieAdapter
-            layoutManager = LinearLayoutManager(
-                this@MainActivity,
-                LinearLayoutManager.HORIZONTAL,
-                false)
-            setHasFixedSize(true)
-        }
-
-        binding.rvEpisode.apply {
-            adapter = movieAdapter
-            layoutManager = LinearLayoutManager(
-                this@MainActivity,
-                LinearLayoutManager.HORIZONTAL,
-                false)
-            setHasFixedSize(true)
-        }
-
-        binding.rvRecentlyAdd.apply {
-            adapter = movieAdapter
-            layoutManager = LinearLayoutManager(
-                this@MainActivity,
-                LinearLayoutManager.HORIZONTAL,
-                false)
+            layoutManager = GridLayoutManager(this@MainActivity,2)
             setHasFixedSize(true)
         }
 

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:fillViewport="true"
+    tools:context=".MovieDetailActivity">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+       <androidx.appcompat.widget.LinearLayoutCompat
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical">
+
+           <androidx.appcompat.widget.LinearLayoutCompat
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+               <androidx.cardview.widget.CardView
+                   android:id="@+id/cv_movie_detail"
+                   android:layout_width="200dp"
+                   android:layout_height="250dp"
+                   android:layout_margin="8dp"
+                   app:cardCornerRadius="8dp"
+                   app:cardElevation="8dp">
+
+                   <androidx.appcompat.widget.AppCompatImageView
+                       android:id="@+id/iv_movie_detail"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:scaleType="fitXY"/>
+
+               </androidx.cardview.widget.CardView>
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_margin="8dp">
+
+                   <androidx.appcompat.widget.AppCompatTextView
+                       android:id="@+id/tv_movie_title"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textColor="@android:color/holo_blue_bright"
+                       android:textSize="22sp"
+                       android:textStyle="bold"
+                       tools:text="Loki"/>
+
+                   <androidx.appcompat.widget.LinearLayoutCompat
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal"
+                       android:layout_marginTop="5dp">
+
+                       <androidx.appcompat.widget.AppCompatTextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="@string/imdb"
+                           android:textColor="@android:color/holo_orange_light"
+                           android:textSize="18sp"
+                           android:textStyle="bold"/>
+
+                       <androidx.appcompat.widget.AppCompatTextView
+                           android:id="@+id/tv_movie_rating"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginStart="10dp"
+                           android:textColor="@android:color/darker_gray"
+                           android:textSize="18sp"
+                           android:textStyle="bold"
+                           tools:text="7.2"/>
+
+                   </androidx.appcompat.widget.LinearLayoutCompat>
+
+                   <androidx.appcompat.widget.LinearLayoutCompat
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal"
+                       android:layout_marginTop="5dp">
+
+                       <androidx.appcompat.widget.AppCompatImageView
+                           android:layout_width="24dp"
+                           android:layout_height="24dp"
+                           android:src="@drawable/ic_baseline_access_time"/>
+
+                       <androidx.appcompat.widget.AppCompatTextView
+                           android:id="@+id/tv_movie_duration"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginStart="10dp"
+                           android:textColor="@android:color/darker_gray"
+                           android:textSize="18sp"
+                           android:textStyle="bold"
+                           tools:text="150"/>
+
+                   </androidx.appcompat.widget.LinearLayoutCompat>
+
+                   <androidx.appcompat.widget.LinearLayoutCompat
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal"
+                       android:layout_marginTop="5dp">
+
+                       <androidx.appcompat.widget.AppCompatTextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="@string/genre"
+                           android:textColor="@android:color/darker_gray"
+                           android:textSize="14sp"
+                           android:textStyle="bold"/>
+
+                       <androidx.appcompat.widget.AppCompatTextView
+                           android:id="@+id/tv_movie_genre"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginStart="5dp"
+                           android:textColor="@android:color/holo_blue_bright"
+                           android:textSize="14sp"
+                           android:textStyle="bold"
+                           tools:text="action"/>
+
+                   </androidx.appcompat.widget.LinearLayoutCompat>
+
+                   <androidx.appcompat.widget.LinearLayoutCompat
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal"
+                       android:layout_marginTop="5dp">
+
+                       <androidx.appcompat.widget.AppCompatTextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="@string/country"
+                           android:textColor="@android:color/darker_gray"
+                           android:textSize="14sp"
+                           android:textStyle="bold"/>
+
+                       <androidx.appcompat.widget.AppCompatTextView
+                           android:id="@+id/tv_movie_country"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginStart="5dp"
+                           android:textColor="@android:color/holo_blue_bright"
+                           android:textSize="14sp"
+                           android:textStyle="bold"
+                           tools:text="US"/>
+
+                   </androidx.appcompat.widget.LinearLayoutCompat>
+
+                   <androidx.appcompat.widget.LinearLayoutCompat
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal"
+                       android:layout_marginTop="5dp">
+
+                       <androidx.appcompat.widget.AppCompatTextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="@string/language"
+                           android:textColor="@android:color/darker_gray"
+                           android:textSize="14sp"
+                           android:textStyle="bold"/>
+
+                       <androidx.appcompat.widget.AppCompatTextView
+                           android:id="@+id/tv_movie_language"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginStart="5dp"
+                           android:textColor="@android:color/holo_blue_bright"
+                           android:textSize="14sp"
+                           android:textStyle="bold"
+                           tools:text="English"/>
+
+                   </androidx.appcompat.widget.LinearLayoutCompat>
+
+                   <androidx.appcompat.widget.LinearLayoutCompat
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal"
+                       android:layout_marginTop="5dp">
+
+                       <androidx.appcompat.widget.AppCompatTextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="@string/schedule"
+                           android:textColor="@android:color/darker_gray"
+                           android:textSize="14sp"
+                           android:textStyle="bold"/>
+
+                       <androidx.appcompat.widget.AppCompatTextView
+                           android:id="@+id/tv_movie_schedule"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginStart="5dp"
+                           android:textColor="@android:color/holo_blue_bright"
+                           android:textSize="14sp"
+                           android:textStyle="bold"
+                           tools:text="Monday"/>
+
+                   </androidx.appcompat.widget.LinearLayoutCompat>
+
+                   <androidx.appcompat.widget.LinearLayoutCompat
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal"
+                       android:layout_marginTop="5dp">
+
+                       <androidx.appcompat.widget.AppCompatTextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="@string/status"
+                           android:textColor="@android:color/darker_gray"
+                           android:textSize="14sp"
+                           android:textStyle="bold"/>
+
+                       <androidx.appcompat.widget.AppCompatTextView
+                           android:id="@+id/tv_movie_status"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginStart="5dp"
+                           android:textColor="@android:color/holo_blue_bright"
+                           android:textSize="14sp"
+                           android:textStyle="bold"
+                           tools:text="Ended"/>
+
+                   </androidx.appcompat.widget.LinearLayoutCompat>
+
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+           </androidx.appcompat.widget.LinearLayoutCompat>
+
+           <androidx.appcompat.widget.AppCompatTextView
+               android:id="@+id/tv_movie_description"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_margin="10dp"
+               android:textColor="@android:color/darker_gray"
+               android:textStyle="bold"
+               android:textSize="14sp"
+               tools:text="abc"/>
+
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/rv_movie_episode"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_margin="10dp">
+
+           </androidx.recyclerview.widget.RecyclerView>
+
+       </androidx.appcompat.widget.LinearLayoutCompat>
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
