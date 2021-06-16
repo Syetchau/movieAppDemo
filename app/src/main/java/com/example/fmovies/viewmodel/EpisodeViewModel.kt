@@ -18,11 +18,7 @@ class EpisodeViewModel @Inject constructor(private val movieRepository: MovieRep
     private val _response = MutableLiveData<List<EpisodeItem>>()
     val episodeResponse: LiveData<List<EpisodeItem>> get() = _response
 
-    init {
-        getEpisodeListOfMovie(Constant.MOVIE_ID)
-    }
-
-    private fun getEpisodeListOfMovie(id: Int) = viewModelScope.launch {
+    fun getEpisodeListOfMovie(id: Int) = viewModelScope.launch {
 
         movieRepository.getEpisodeListByMovie(id).let { response ->
             if (response.isSuccessful) {

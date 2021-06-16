@@ -42,9 +42,11 @@ class EpisodeAdapter: RecyclerView.Adapter<EpisodeAdapter.EpisodeViewHolder>() {
 
         holder.binding.apply {
             val episodeId = StringBuilder()
+                .append("Season ")
                 .append(currentEpisode.season)
-                .append(" - ")
+                .append(" Episode ")
                 .append(currentEpisode.number)
+
             tvMovieEpisode.text = episodeId
             tvMovieEpisodeTitle.text = currentEpisode.name
         }

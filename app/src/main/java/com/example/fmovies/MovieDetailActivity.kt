@@ -32,7 +32,7 @@ class MovieDetailActivity : AppCompatActivity() {
     private fun initData() {
         val movie = intent.getSerializableExtra(Constant.MOVIE) as? TvShowItem
         episodeAdapter = EpisodeAdapter()
-        Constant.MOVIE_ID = movie!!.id
+        viewModel.getEpisodeListOfMovie(movie!!.id)
 
         binding.apply {
             val movieDuration = StringBuilder()
